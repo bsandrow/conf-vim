@@ -39,7 +39,8 @@ let g:did_todo_ftplugin = 1
 " Save original cpoptions value, and enable use of compound statements
 let s:save_cpo = &cpo
 set cpo-=C
-let b:undo_ftplugin = "unlet! g:did_todo_ftplugin"
+setlocal comments=::
+let b:undo_ftplugin = "unlet! g:did_todo_ftplugin | setlocal comments<"
 
 """"""""""
 "" Helper Functions
